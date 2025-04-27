@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 from discord.ui import View, Select, Modal, TextInput, Button
+import os
+
 
 # Intents setup
 intents = discord.Intents.default()
@@ -138,4 +140,5 @@ async def ticket(ctx):
     await ctx.send(embed=embed, view=TicketDropdownView())
 
 # Start the bot
-bot.run("MTM2NTY2NjU5NjM5OTM0OTgzMQ.GdxdM1.Uc2MorETIvxYtSJQIUNWl6c5MQ9L9VV-Mpbjj8")
+bot.run(os.environ["DISCORD_TOKEN"])
+
